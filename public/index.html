@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="top-0 left-0 w-full flex items-center absolute z-10">
+        <div class="container w-full">
+            <!-- Hamburger button -->
+            <div class="flex mx-4 -mt-4">
+                <button id="hamburger" name="hamburger" class="">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <!-- Logo -->
+                <a href="#" class="">
+                    <img src="./img/logo/youtube.svg" alt="Logo" class="w-32 ml-4">
+                </a>
+                <span class="text-slate-500 text-[10px] -ml-3 mt-6">ID</span>
+
+                <div class="hidden md:block lg:block xl:block mt-6">
+                    <div class="flex ml-9">
+                        <input type="text" name="search" id="search" placeholder="Telusuri"
+                            class="placeholder:pl-4 bg-transparent outline outline-[#ffffff1a] outline-1 w-60 lg:w-72 xl:w-96 rounded-l-3xl h-10">
+                        <div
+                            class="bg-[#ffffff1a] flex justify-center items-center w-20 h-[41px] mx-auto rounded-r-3xl">
+                            <button class="">
+                                <img src="./img/search.png" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex mr-2 gap-3">
+                    <button class="mx-auto md:hidden lg:hidden xl:hidden">
+                        <img src="./img/search.png" alt="">
+                    </button>
+                    <button
+                        class="pl-2 bg-[#ffffff1a] rounded-3xl w-[88px] h-10 font-medium text-center inline-flex items-center text-slate-200">
+                        <img src="./img/plus.png" width="20px" alt="" class="mr-2"> Buat
+                    </button>
+
+                    <img src="./img/profile.jpeg" alt="" class="rounded-full w-10 h-10">
+                </div>
+            </div>
+
+            <!-- Kategori -->
+            <div class="relative py-2 my-auto overflow-hidden">
+                <div class="container mx-auto">
+                    <div id="category-carousel-wrapper" class="relative flex items-center">
+                        <button id="prev-category-btn"
+                            class="absolute left-0 z-20 p-2 bg-black rounded-full shadow-md text-white hover:bg-[#ffffff1a] focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+
+                        <div id="category-items" class="flex flex-nowrap overflow-x-hidden scroll-smooth w-full px-10">
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Semua</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Musik</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Game</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Berita</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Olahraga</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Teknologi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Memasak</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                            <div class="flex-shrink-0 px-2 py-1">
+                                <button
+                                    class="bg-[#ffffff1a] text-slate-200 min-w-[80px] h-9 rounded-lg px-3 whitespace-nowrap focus:bg-slate-200 focus:text-slate-900 transition-colors duration-200">
+                                    <h3 class="font-semibold">Edukasi</h3>
+                                </button>
+                            </div>
+                        </div>
+
+                        <button id="next-category-btn"
+                            class="absolute right-0 z-20 p-2 bg-black rounded-full shadow-md text-white hover:bg-gray-700 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Section Video -->
+    <div class="grid grid-cols-2">
+        <!-- Sidebar -->
+
+
+    </div>
+    <section class="pt-32 px-4">
+        <div class="container">
+            <div class="w-full flex flex-wrap justify-center">
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+                <div class="mb-3 p-4 md:w-1/2 xl:w-1/3  ">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="./img/logo/images.jpeg" alt="" width="w-full" class="rounded-xl">
+                    </div>
+                    <div class="flex mt-3">
+                        <img src="./img/profile.jpeg" alt="profile" class="rounded-full w-12 h-12">
+                        <!-- Caption -->
+                        <h2
+                            class="text-slate-200 text-sm font-semibold pl-3 line-clamp-2 text-ellipsis overflow-hidden">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, laborum.</h2>
+                        <button class="text-slate-200 font-semibold text-xl ml-2 -mt-9">
+                            ⁝
+                        </button>
+                    </div>
+                    <h3 class="text-gray-400 mt-3 ml-[68px] text-sm">Faisal Ramadhan</h3>
+                    <h3 class="text-gray-400  ml-[68px] text-sm">22 jt x ditonton • 2 tahun yang lalu</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

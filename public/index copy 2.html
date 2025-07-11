@@ -11,90 +11,42 @@
 
 <body>
     <header class="top-0 left-0 pt-1 w-full flex items-center z-50 h-32">
-        <div class="container mx-auto">
+        <div class="container">
             <!-- Hamburger button -->
-            <div class="flex items-center ">
-                <!-- kiri -->
-                <div class="flex items-center">
-                    <button id="hamburger" name="hamburger"
-                        class=" hover:bg-secondary hover:rounded-full w-10 h-10 justify-center">
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                        <span class="hamburger-line"></span>
-                    </button>
-                    <!-- Logo -->
-                    <a href="#" class="flex">
-                        <img src="./img/logo/youtube.svg" alt="Logo" class="w-32">
-                    </a>
-                    <span class="text-slate-500 text-[10px] -ml-3  -mt-5">ID</span>
-                </div>
+            <div class="flex items-center w-full">
+                <button id="hamburger" name="hamburger" class=" hover:bg-secondary hover:rounded-full w-10 h-10 justify-center">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <!-- Logo -->
+                <a href="#" class="flex">
+                    <img src="./img/logo/youtube.svg" alt="Logo" class="w-32">
+                </a>
+                <span class="text-slate-500 text-[10px] -ml-3  -mt-5">ID</span>
 
-                <!-- Tengah -->
-                <div class="hidden md:flex lg:flex xl:flex w-full justify-center ">
-                    <div class="flex justify-center relative">
-
-                        <input type="text" name="search" id="search" placeholder="Telusuri" class="p-5 pr-9 text-[#fff] placeholder:text-[#6d6d6d] bg-[#121212] outline outline-[#2b2b2b] outline-1 w-60 lg:w-72 z-40
+                <div class="hidden md:flex lg:flex xl:flex w-full justify-center">
+                    <div class="flex justify-center">
+                        <input type="text" name="search" id="search" placeholder="Telusuri"
+                            class="p-5 text-[#fff] placeholder:text-[#6d6d6d] bg-[#121212] outline outline-[#2b2b2b] outline-1 w-60 lg:w-72 z-40
                              xl:w-[632px] rounded-l-3xl h-10 focus:ring-blue-500 focus:outline-blue-500">
-                        
-                        <!-- Cancel search -->
-                         <button type="button" id="btn-cancel-search" data-search='{
-                            "target": "#search"
-                         }' class="absolute inset-y-0 end-[116px] rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-400 z-50">
-                            <svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 180.607 180.607" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M180.607,10.607l-79.696,79.697l79.696,79.697L170,180.607l-79.696-79.696l-79.696,79.696L0,170.001l79.696-79.697L0,10.607 L10.607,0.001l79.696,79.696L170,0.001L180.607,10.607z"></path> </g></svg>
-                        </button>
 
-                        <button
-                            class="bg-[#222222] flex justify-center items-center w-[62px] h-10 outline outline-[#2b2b2b] outline-1 z-30 mx-auto rounded-r-3xl overflow-hidden">
-                            <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 488.4 488.4" xml:space="preserve" stroke="#ffffff">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <g>
-                                        <g>
-                                            <path
-                                                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </button>
-
-                        <button class="ml-3 rounded-full bg-[#222222] w-10 h-10 flex items-center justify-center hover:bg-gray-400">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"
-                            class="fill-white w-6 h-6" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit;"><path d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"></path></svg>
-                        </button>
+                            <button class="bg-[#222222] flex justify-center items-center w-[62px] h-10 outline outline-[#2b2b2b] outline-1 z-30 mx-auto rounded-r-3xl overflow-hidden">
+                                <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 488.4 488.4" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"></path> </g> </g> </g></svg>
+                            </button>
                     </div>
                 </div>
 
-                <!-- Kanan -->
-                <div id="head_kanan" class="w-full md:w-48 lg:w-48 xl:w-48 flex justify-end">
-                    <div class="flex mr-1 gap-3">
-                        <button class="md:hidden lg:hidden xl:hidden">
-                            <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 488.4 488.4" xml:space="preserve" stroke="#ffffff">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <g>
-                                        <g>
-                                            <path
-                                                d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </button>
-                        <button
-                            class="pl-2 bg-secondary rounded-3xl h-10 font-medium text-center inline-flex items-center text-slate-200 min-w-[fit-content] px-4">
-                            <img src="./img/plus.png" alt="" class="w-5 mr-2"> Buat
-                        </button>
-                        <img src="./img/profile.jpeg" alt="" class="rounded-full w-8 h-8 my-auto">
-                    </div>
+                <div class="flex justify-end mr-1 gap-3">
+                    <button class="md:hidden lg:hidden xl:hidden">
+                        <svg fill="#ffffff" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 488.4 488.4" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M0,203.25c0,112.1,91.2,203.2,203.2,203.2c51.6,0,98.8-19.4,134.7-51.2l129.5,129.5c2.4,2.4,5.5,3.6,8.7,3.6 s6.3-1.2,8.7-3.6c4.8-4.8,4.8-12.5,0-17.3l-129.6-129.5c31.8-35.9,51.2-83,51.2-134.7c0-112.1-91.2-203.2-203.2-203.2 S0,91.15,0,203.25z M381.9,203.25c0,98.5-80.2,178.7-178.7,178.7s-178.7-80.2-178.7-178.7s80.2-178.7,178.7-178.7 S381.9,104.65,381.9,203.25z"></path> </g> </g> </g></svg>
+                    </button>
+                    <button
+                        class="pl-2 bg-secondary rounded-3xl h-10 font-medium text-center inline-flex items-center text-slate-200 min-w-[fit-content] px-4">
+                        <img src="./img/plus.png" alt="" class="w-5 mr-2"> Buat
+                    </button>
+
+                    <img src="./img/profile.jpeg" alt="" class="rounded-full w-8 h-8 my-auto">
                 </div>
             </div>
 
@@ -217,7 +169,7 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </div>  
     </header>
 
     <!-- Sidebar -->

@@ -57,3 +57,44 @@ const updateNavButtons = () => {
 categoryItems.addEventListener('scroll', updateNavButtons);
 window.addEventListener('resize', updateNavButtons); // Untuk responsivitas
 updateNavButtons(); // Panggil saat awal untuk inisialisasi status tombol
+
+
+// function isScreenBelowSm() {
+//   return window.innerWidth < 640;
+// }
+
+// const head_kanan = document.getElementById('head-kanan');
+// if (isScreenBelowSm()) {
+//     head_kanan.classList.add('w-full');
+// } else {
+//     head_kanan.classList.remove('w-full');
+// }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('search');
+    const cancelButton = document.getElementById('btn-cancel-search');
+
+    // Fungsi untuk memeriksa input dan menampilkan/menyembunyikan tombol
+    function toggleCancelButton() {
+        if (searchInput.value.length > 0) {
+            cancelButton.classList.remove('hidden'); // Tampilkan tombol
+        } else {
+            cancelButton.classList.add('hidden'); // Sembunyikan tombol
+        }
+    }
+
+    // Event listener untuk input pencarian
+    searchInput.addEventListener('input', toggleCancelButton);
+
+    // Event listener untuk tombol cancel
+    cancelButton.addEventListener('click', function () {
+        searchInput.value = ''; // Kosongkan input
+        toggleCancelButton(); // Sembunyikan tombol
+        searchInput.focus(); // Opsional: kembalikan fokus ke input
+    });
+
+    // Panggil fungsi sekali saat halaman dimuat untuk menangani kasus input sudah terisi saat refresh
+    toggleCancelButton();
+});

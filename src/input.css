@@ -8,11 +8,15 @@ body {
 }
 
 .navbar-fixed {
-  @apply fixed z-[9999] bg-[#0f0f0f] bg-opacity-70;
+  @apply fixed z-[9990] bg-[#0f0f0f] bg-opacity-70;
   backdrop-filter: blur(48px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .hamburger-line {
   @apply w-[20px] h-[1px] my-[5px] block bg-slate-200 rounded-sm justify-self-center;
+}
+
+.icon-keep-side {
+  @apply shrink-0 w-6 h-6 text-white transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-white mr-6;
 }
